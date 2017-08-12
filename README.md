@@ -28,16 +28,19 @@ To set up the dependencies:
 npm install
 ```
 
+
 Start up the application:
 ```
 grunt serve
 ```
 The page can be accessed at: localhost:9000
 
+
 To run unit tests:
 ```
 grunt test
 ```
+
 
 To get production build ready:
 ```
@@ -45,5 +48,11 @@ grunt build
 ```
 This step should create a "dist" folder where all the code is minified and ready for production. You only need to include this folder for production builds.
 
-##Demo
+
+## Demo
 You can find a live demo here: https://dawong.github.io/shipt/
+
+[npm]: https://www.npmjs.com/
+[yeoman]: http://yeoman.io/
+[grunt]: https://gruntjs.com/
+[bower]: http://bower.io/
