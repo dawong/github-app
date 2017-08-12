@@ -1,0 +1,64 @@
+<header>
+  <div id="appHeader" class="container-fluid text-center">
+    <div>Github App</div>
+  </div> 
+</header>
+
+<div id="appBody" class="container-fluid addborders">
+  <div class="row">
+    <form>
+      <div class="input-group search-bar">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit" ng-click="getUserInfo()">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+        <input ng-model="user.name" type="text" class="form-control" placeholder="Username"  />
+      </div>
+    </form>
+  </div>
+
+  <div class="row">
+    <div ng-if="showError" class="alert alert-danger error-section text-center">
+      <strong>Error!</strong> Invalid username. Try again.
+    </div>
+  </div>
+
+  <div class="row text-center" ng-if="userData">
+    <div>
+      <a href="{{userData.html_url}}" target="_blank">
+        <img class="rounded-img" ng-if="userData.avatar_url" ng-src="{{userData.avatar_url}}" alt="avatarImg" height="300" width="300">
+      </a>
+    </div>
+    <div>
+      <span class="span-block user-info-login">{{userData.login}}</span>
+      <span class="span-block user-info-name">{{userData.name}}</span>
+      <span class="span-block user-info-followers"># of followers: {{userData.followers}}</span>
+    </div>
+  </div>
+
+  <hr ng-if="user.followers.length > 0">
+
+  <div ng-if="user.followers.length > 0" class="text-center">
+    <p>
+      <span class="follower-header">Followers:</span>
+    </p>
+  </div>
+
+  <div class="row">
+    <ul>
+      <li class="follower-li flex-display" ng-repeat="follower in user.followers track by $index">
+        <a href="{{follower.html_url}}" target="_blank">
+          <img class="follower-img rounded-img" ng-src="{{follower.avatar_url}}" alt="followerImg">
+        </a>
+        <div>
+          <span class="follower-span">{{follower.login}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="row text-center" ng-if="canLoadMore">
+    <button class="btn btn-load-more" type="button" ng-click="loadMore()">Load More</button>
+  </div>
+</div>

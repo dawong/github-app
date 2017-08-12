@@ -1,0 +1,95 @@
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+hr {
+  border-top: 1px solid #bfbfbf;
+}
+#appContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#appHeader {
+  background: linear-gradient(#71b044, #5f9339);
+  max-width: 600px;
+  color: #fff;
+  border-radius: 6px 6px 0 0;
+}
+#appHeader div {
+  font-size: 36px;
+  margin: 10px 0;
+}
+#appBody {
+  max-width: 600px;
+  border-radius: 0 0 6px 6px;
+}
+
+.search-bar {
+  width: 50%;
+  margin: 15px auto;
+}
+.error-section {
+  width: 50%;
+  margin: 15px auto;
+}
+.span-block {
+  display: block;
+}
+.user-info-login {
+  font-size: 36px;
+  margin-top: 15px;
+}
+.user-info-name {
+  font-size: 16px;
+  color: #666;
+}
+.user-info-followers {
+  font-size: 14px;
+  color: #666;
+}
+.follower-header {
+  font-size: 16px;
+}
+.addborders {
+  border-left: 1px solid #bfbfbf;
+  border-right: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+}
+.flex-display {
+  display: flex;
+}
+.follower-li {
+  height: 100px;
+  margin: 0px 30px 15px 30px;
+  border-radius: 6px;
+}
+.follower-li a {
+  height: 80%;
+  margin-top: 10px;
+}
+.follower-img {
+  height: 100%;
+  border: 0 !important;
+}
+.follower-li div {
+  margin: auto auto auto 30px;
+  font-size: 16px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid #bfbfbf;
+}
+.follower-span {
+  margin: auto 0;
+}
+.btn-load-more {
+  width: 50%;
+  height: 50px;
+  margin: 15px auto;
+  font-size: 20px;
+}
+.rounded-img {
+  border-radius: 6px;
+  border: 1px solid #bfbfbf;
+}
